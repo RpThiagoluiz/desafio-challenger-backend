@@ -22,6 +22,14 @@ export class createNews1611746761038 implements MigrationInterface {
             name: "description",
             type: "text",
           },
+          {
+            name: "createdAt",
+            type: "timestamp",
+          },
+          {
+            name: "updateAt",
+            type: "timestamp",
+          },
         ],
       })
     );
