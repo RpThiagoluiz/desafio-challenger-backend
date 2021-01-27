@@ -5,13 +5,12 @@ import NewsController from "./controllers/NewsController";
 
 const routes = Router();
 
-routes.get("/classificados", (request, response) => {
-  return response.json({ message: "Hello World" });
-});
+routes.get("/classificados", NewsController.index);
 routes.post("/classificados/criar", NewsController.create);
+routes.get("/classificados/:id", NewsController.show);
+routes.delete("/classificado/:id", NewsController.delete);
 
 //upTo
-routes.put("/classificado/:id");
-routes.delete("/classificado/:id");
+//routes.put("/classificado/:id");
 
 export default routes;
