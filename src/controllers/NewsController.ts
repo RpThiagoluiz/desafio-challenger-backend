@@ -1,6 +1,11 @@
 import { Request, Response } from "express";
 import { getRepository } from "typeorm";
 import News from "../models/News";
+//Yup for validate data
+import * as Yup from "yup";
+//Erros
+import "express-async-errors";
+
 import newViews from "../views/news_views";
 
 export default {
@@ -28,10 +33,21 @@ export default {
     const { title, description } = request.body;
     const newsRepository = getRepository(News);
 
-    const createNew = newsRepository.create({
+    const data = {
       title,
       description,
+    };
+
+    const schema = Yup.object().shape({
+      title: Yup.string().required(),
+      description: Yup.string().required(),
     });
+
+    await schema.validate(data, {
+      abortEarly: false,
+    });
+
+    const createNew = newsRepository.create(data);
 
     await newsRepository.save(createNew);
 
