@@ -7,8 +7,8 @@ const routes = Router();
 
 routes.get("/classificados", NewsController.index);
 routes.post("/classificados/criar", NewsController.create);
-routes.get("/classificados/:id", NewsController.show);
-routes.delete("/classificado/:id", NewsController.delete);
+routes.get("/classificado/:id", NewsController.show);
+routes.delete("/classificado/delete/:id", NewsController.delete);
 
 //upTo
 //routes.put("/classificado/:id");
