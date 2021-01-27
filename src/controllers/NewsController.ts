@@ -39,8 +39,8 @@ export default {
     };
 
     const schema = Yup.object().shape({
-      title: Yup.string().required(),
-      description: Yup.string().required(),
+      title: Yup.string().required("Titulo obrigatorio"),
+      description: Yup.string().required("Descricao obrigatoria"),
     });
 
     await schema.validate(data, {
