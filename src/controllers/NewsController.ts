@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { getRepository } from "typeorm";
+import { getRepository, UpdateResult } from "typeorm";
 import News from "../models/News";
 //Yup for validate data
 import * as Yup from "yup";
@@ -7,6 +7,7 @@ import * as Yup from "yup";
 import "express-async-errors";
 
 import newViews from "../views/news_views";
+import { string } from "yup/lib/locale";
 
 export default {
   async index(request: Request, response: Response) {
@@ -53,6 +54,8 @@ export default {
 
     return response.status(201).json(createNew);
   },
+
+  //   -> update Note.
 
   async delete(request: Request, response: Response) {
     const { id } = request.params;

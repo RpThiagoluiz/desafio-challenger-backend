@@ -17,6 +17,7 @@
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.9",
     "ts-node-dev": "^1.1.1",
     "typescript": "^4.1.3"
   }
