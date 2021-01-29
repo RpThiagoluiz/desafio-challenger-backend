@@ -3,7 +3,7 @@ pt-br,
 ## Instruções
 
 `yarn install` <p>Instalar as dependências, pode se usar o npm tbm.</p> <small>OU</small>
-`npm install`
+`npm install` </br>
 `yarn dev` <p>Executar o back-end</p>
 
 <p>Backend vai rodar na porta 3333,http://localhost:3333/,</p>
@@ -37,7 +37,10 @@ rel = "noopener noreferrer"> frontend </a> </p>
 
 ### Prints
 
-![](./ImgRead.ME/.png)
+![](./ImgRead.ME/created.png)
+![](./ImgRead.ME/listar.png)
+![](./ImgRead.ME/listarum.png)
+![](./ImgRead.ME/deletar.png)
 
 <h4>Updates</h4>
 
